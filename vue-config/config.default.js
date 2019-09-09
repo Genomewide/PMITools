@@ -9,5 +9,11 @@ module.exports = {
     workboxOptions: {
       swSrc: path.join('public', 'service-worker.js')
     }
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: [path.resolve(__dirname, './src/styles/global.scss')]
+    }
   }
 }
